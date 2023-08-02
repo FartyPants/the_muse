@@ -1,4 +1,4 @@
-# The Muse
+# The Muse (wrapped as oobabooga WebUI extension)
 
 This project implements `MuseLogitsWarper`, a simple logit processor that makes the top logit propabilities less likely.
 
