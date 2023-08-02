@@ -98,8 +98,8 @@ def ui():
     with gr.Accordion("Probabilities reduction"):
         top_k_m = gr.Slider(1, 40, value=params["top_k_m"], step=1, label='Reduce the Most probable tokens [top_k]')
         #damp_initial = gr.Slider(0.0, 1.0, value=params["damp_initial"], step=0.01, label='- from [damp_initial]')
-        damp = gr.Slider(0.0, 1.0, value=params["damp"], step=0.01, label='with probability [damp]')
-        damp_ramp_tokens = gr.Slider(0, 100, value=params["damp_ramp_tokens"], step=1, label='over the span of the first number of tokens [damp_ramp_tokens]')
+        damp = gr.Slider(0.0, 1.0, value=params["damp"], step=0.01, label='with probability [damp] (the smaller - the more crazier the replies will be)')
+        damp_ramp_tokens = gr.Slider(0, 100, value=params["damp_ramp_tokens"], step=1, label='Ramp over the first number of tokens [damp_ramp_tokens]')
    
     temperature.change(lambda x: params.update({'temperature': x}), temperature, None)
     top_p.change(lambda x: params.update({'top_p': x}), top_p, None)
